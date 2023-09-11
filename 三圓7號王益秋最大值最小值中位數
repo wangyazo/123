@@ -1,0 +1,24 @@
+include "pch.h"
+#include <algorithm>
+#include <iostream>
+using namespace std;
+int main()
+{
+	int c, aa[20];
+	cout << "請問要輸入幾筆資料" << endl;
+	cin >> c;
+	for (int i = 0; i < c; i++)
+	{
+		cin >> aa[i];
+	}
+	sort(aa, aa + c);
+	double d;
+	if (c % 2 == 0) {
+		d = (aa[c / 2 - 1] + aa[c / 2]) / 2.0;
+	}
+	else { d = aa[c / 2]; }
+	cout << "最小值" << aa[0]<<endl;
+	cout << "中位數" << d<<endl;
+	cout << "最大值" << aa[c-1]<<endl;
+	return 0;
+	}
